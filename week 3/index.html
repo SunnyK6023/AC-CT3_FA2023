@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment of Motion Interaction without Kinect in TouchDesigner</title>
+    <style>
+        body {
+            font-size: 15px;
+            margin-top: 20px; /* Add space from the top */
+        }
+        .content {
+            width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        iframe {
+            width: 600px;
+            height: 400px; /* Adjust the height as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Experiment of Motion Interaction without Kinect in TouchDesigner</h1>
+
+        <p>I showcased a project video at the Getty Museum, which was created by the TouchDesigner team and featured an immersive, interactive installation blending AI and visual arts. While exploring this project, I began to create a diagram to better understand its working system and identify specific aspects I wanted to examine closely.</p>
+
+        <p><strong>The Project:</strong> <a href="https://derivative.ca/community-post/night-getty-what-i-see-what-you-get/62059">https://derivative.ca/community-post/night-getty-what-i-see-what-you-get/62059</a></p>
+
+        <p><strong>The references:</strong> <a href="https://www.youtube.com/watch?v=hhaeFIpiNY8">Video 1</a>, <a href="https://www.youtube.com/watch?v=HIn2IBBhxXk">Video 2</a></p>
+        
+        <img src="Diagram.jpg" alt="Diagram of the Working System" width="600">
+        <br>
+        <iframe src="https://www.youtube.com/embed/QClcLaPq2HM" frameborder="0" allowfullscreen></iframe>
+
+        <p>To experiment with motion detection interaction, I used TouchDesigner. However, my initial attempt following a tutorial didn't yield the desired results. As you can see in the video, it appeared that the particles were not responding effectively to the motion data from the camera, resulting in a weak response.</p>
+
+        <img src="process2.png" alt="Image of the Process" width="600">
+        <br>
+
+        <p>To improve this, I incorporated optical flow to capture more nuanced motion details. Nevertheless, this alone wasn't sufficient to achieve the desired level of precision. To address this, I introduced another function called "cache." This addition helped enhance the quality of my motion data and removed extraneous data from the background.</p>
+
+        <iframe src="https://www.youtube.com/embed/0WfEkxzIQTY" frameborder="0" allowfullscreen></iframe>
+        <p>By combining these two functions, the interaction with the particles became more dynamic, although it may have appeared somewhat aggressive at times. Nevertheless, this approach significantly improved response speed and visualization clarity. It's worth noting that most tutorials on this topic use Kinect or simply apply filters. However, my aim was to explore motion detection without relying on Kinect, which I plan to delve into in my next steps.</p>
+    </div>
+</body>
+</html>
