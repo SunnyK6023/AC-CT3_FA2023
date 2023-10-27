@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 18px;
+        font-family: "Helvetica", sans-serif;
+    }
+    h3 {
+        margin-top: 20px;
+        text-align: left;
+    }
+    h2 {
+        margin-top: 100px;
+        font-size: 28px;
+    }
+    h4 {
+        margin-top: 40px;
+        margin-bottom: 100px;
+        font-size: 18px;
+    }
+    img {
+        width: 800px;
+        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto;
+    }
+    iframe {
+        width: 800px;
+        height: 450px;
+        margin: 0 auto;
+        display: block;
+    }
+    p {
+        margin-bottom: 200px;
+        text-align: justify;
+    }
+</style>
+</head>
+<body>
+
+<h2>Synthetic Relationships</h2>
+
+<h4>Team project: Sinhye Sunny Kim, Luka Zhuang</h4>
+
+<h3 style="margin-top: 20px; text-align: left;">Sunny's video</h3>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/CaYLGejlPIw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3 style="margin-top: 20px; text-align: left;">Luka's video</h3>
+<iframe width="800" height="450" src= "https://www.youtube.com/embed/4aQkm_BgH78" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<h3 style="margin-top: 20px; text-align: left;">Description</h3>
+<p>
+    I use a force sensor to send the data to my Adafruit IO, and my partner’s circuit receives the data to light up LEDs based on the scale of the value. My partner Luka uses ultrasonic sensor to define the distance to control the servo motor on my board.
+</p>
+
+<img src="Basic Diagram for system.png">
+
+<h3 style="margin-top: 20px; text-align: left;">Project Overview</h3>
+<p>
+    This Creative Technologies project demonstrates sending data from my circuit with a specific sensor to my partner’s circuit to run some output. I also need to receive the data from my partner’s circuit with her sensor to run some output on my board.
+</p>
+
+<img src="Introduction.png">
+<img src="Final Diagram.png">
+
+<h3 style="margin-top: 20px; text-align: left;">Project Details</h3>
+<p>
+    In this project, we tried to create a system representing the relationship between the Sun and Sunflower. We decided to use a force sensor and an ultrasonic sensor for input and LEDs and a servo motor for output.
+</p>
+
+<img src="arduino1.png">
+<img src="arduino2.png">
+
+<h3 style="margin-top: 20px; text-align: left;">Testing and Integration</h3>
+<p>
+    For my part, I used a force sensor to light up multiple LEDs. First, I tested on my board, and the LEDs received the data from the same circuit. Also, I added code for receiving the data from my partner’s Adafruit IO (otherValueForMotor).
+</p>
+
+<img src="config.h.png">
+
+<p>
+    After demonstrating to test LEDs with a force sensor, I added commands in the code for connecting to my Adafruit IO. I needed to check the Wi-Fi, IO key, username, and feed name carefully. Also, the feed needed to be public to send to others.
+</p>
+
+<img src="press_led_physical.gif">
+
+<h3 style="margin-top: 20px; text-align: left;">Operation Description</h3>
+<p>
+    Depends on how much I press, if the value is bigger than 2000, 2 LEDs light up. If the value is between 1000 and 2000, 1 LED lights up. If the value is less than 1000, no LEDs light up.
+</p>
+
+<img src="codeforservo.png">
+<h3 style="margin-top: 20px; text-align: left;">Switch Code</h3>
+<p>
+    Finally replaced the code for LEDs to servo motor. And rewrite the code that depends on the value from my partner’s ultrasonic sensor change to the specific angles.
+</p>
+
+
+
+
+
+<img src="Gif1.gif">
+<img src="Gif2.gif">
+<h3 style="margin-top: 20px; text-align: left;">Test Results</h3>
+<p>
+    We tested the connection to run each other’s output (LEDs and servo motor) by using our own Adafruit IO data in real time. We faced a problem during this testing that the ultrasonic sensor was too sensitive to read the distance from hands or paper, and the resulting output could not be clearly shown.
+</p>
+
+<img src="mapping.png">
+<h3 style="margin-top: 20px; text-align: left;">Data Adjustment</h3>
+<p>
+    Because of raw data from sensors, we used the command map to adjust the range of values from raw data to make the relationships clearer.
+</p>
+
+
+<img src="status2.png">
+<h3 style="margin-top: 20px; text-align: left;">Final Problem</h3>
+<p>
+    The last problem I encountered was an error called status2, and it was resolved by disconnecting A0, pin 12, and pin 13, which were occupying the storage space mostly, to free up space for running the code.
+</p>
+
+
+<h3 style="margin-top: 20px; text-align: left;">Learning Point</h3>
+<p>
+    Using Adafruit IO may introduce avoidable delays depending on the condition of the Wi-Fi and the Adafruit IO environment itself. If immediate project data processing is crucial, it may not be suitable to rely on Adafruit IO. However, if the goal is to freely share data location, it can be a great tool to explore.</p>
+</body>
+</html>
