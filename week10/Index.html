@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation and Design Brief</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 360px; /* Adjust the height as needed */
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simulation and Design Brief</h1>
+
+    <!-- Updated YouTube video embedding -->
+    <iframe width="100%" height="360" src="https://www.youtube.com/embed/1sJHMhdrwAU" frameborder="0" allowfullscreen></iframe>
+
+    <h2>Simulating Los Angeles with traffic and buildings</h2>
+
+    <p>To generate LA, first of all, decide the area and need the locations.</p>
+
+    <!-- Updated mapping images to PNG format -->
+    <img src="mapping_CT-01.png" alt="Mapping CT 01">
+    <img src="mapping_CT-02.png" alt="Mapping CT 02">
+    <img src="mapping_CT-03.png" alt="Mapping CT 03">
+
+    <h3>#1 Process</h3>
+    <p>I needed to generate the cubes as a representation of building growth, but it was supported without Rigidbody to stack them up in a stable way.</p>
+    <!-- Display GIFs directly -->
+    <img src="intheair.gif" alt="In the Air GIF">
+    <img src="generated_cube.gif" alt="Generated Cube GIF">
+
+    <h3>#2 Process</h3>
+    <p>But the cubes are appealing in the air, so I needed to place them on top of cubes when these are generated.</p>
+    <img src="position_cube.jpg" alt="Cube Positioning">
+
+    <h3>#3 Process</h3>
+    <p>Also, to add some variety of scales, make some range of scales of the cube from 1 to 5.</p>
+    <img src="randomscale.jpg" alt="Random Scaling">
+
+    <h3>#4 Process</h3>
+    <p>I needed to generate more than 10 buildings by the mapping, so I added the function to count them from 0 to whatever I want.</p>
+    <img src="duplicated.jpg" alt="Building Duplication">
+
+    <h3>#5 Process</h3>
+    <p>On the specific location for LAX, DTLA, and ArtCenter 950 buildings, fix the colors (mint, blue, and orange) to recognize them.</p>
+    <img src="checkcolors.png" alt="Color Specification">
+
+    <h3>#6 Process</h3>
+    <p>Add cars also generated to show the complexity of LA. So, downloaded from free prefab for a car model and imported the file to Unity. It contains a lot of individual features on the car.</p>
+    <img src="car_group.png" alt="Car Generation">
+
+    <h3>#7 Process</h3>
+    <p>Not able to add Rigidbody/collider to cars maybe because of the complexity of prefab, so manually add a box collider around the car.</p>
+    <img src="box_colider.png" alt="Collider Addition">
+
+    <h2>Final Scene</h2>
+    <img src="final_img.png" alt="Final Scene">
+
+</body>
+</html>
