@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Materialities Brief: Water Shaders in Plane and Sphere</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Digital Materialities Brief: Water Shaders in Plane and Sphere</h1>
+
+<p>Reference Video: <a href="https://www.youtube.com/watch?v=wcGT_jji5xQ" target="_blank">https://www.youtube.com/watch?v=wcGT_jji5xQ</a></p>
+
+<h2>Youtube Video</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2BNEQJImbDc" frameborder="0" allowfullscreen></iframe>
+
+<h2>Controller Image</h2>
+<img src="controllers.png" alt="Controller Image">
+
+<h2>Settings on Material</h2>
+<img src="settingonMaterial.png" alt="Material Settings Image">
+
+<p>First of all, download the water texture in PNG format to enhance the realism. Use two different water texture images and one noise file.</p>
+
+<h2>Water Shader Properties</h2>
+<img src="waterShaderProperties.png" alt="Water Shader Properties Image">
+
+<h2>Shader Explanation - WaterShader1</h2>
+
+<h3>SubShader Block</h3>
+<p>The SubShader block sets up rendering properties for an opaque object with specific tags, LOD, and shader targets. It includes texture samples, shader parameters, and an input structure for passing data from the vertex to the surface shader.</p>
+
+<h3>CGPROGRAM Block</h3>
+<p>The CGPROGRAM block contains the actual shader code, specifying the surface shader function, lighting model, and other properties.</p>
+
+<img src="waterShader1-1.png" alt="WaterShader1 SubShader Image">
+<img src="waterShader1-2.png" alt="WaterShader1 Explanation Image">
+<img src="waterShader1-3.png" alt="WaterShader1 Explanation Image">
+
+<h2>Shader Explanation - WaterShader2</h2>
+
+<h3>Modification for Sphere</h3>
+<p>I wanted to apply the water shader to a Sphere, but it wasn't visible. The key difference in the modified surf function of "WaterShader2" is the consideration of the object's local space coordinates.</p>
+
+<img src="waterShader2-1.png" alt="WaterShader2 Modification Image">
+<img src="waterShader2-2.png" alt="WaterShader2 Modification Image">
+
+<h2>Shader Comparison</h2>
+<img src="twoShaders.gif" alt="Shader Comparison GIF">
+
+</body>
+</html>
